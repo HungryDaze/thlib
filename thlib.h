@@ -1,6 +1,5 @@
 #ifndef THLIB_H_INCLUDED
 #define THLIB_H_INCLUDED
-
 #include "Arduino.h"
 
 using namespace std;
@@ -11,52 +10,47 @@ enum signalType{analog,digital};
 
 class Sensor{
 
-protected:
+  protected:
 
     uint8_t pin;
     signalType type;
     int value;
 
-public:
+  public:
     Sensor(uint8_t pin); //constructor for inputs for pins 0 - 19
-	Sensor(uint8_t pin,signalType type);//constructor for inputs over pin 19
+    Sensor(uint8_t pin,signalType type);//constructor for inputs over pin 19
     Sensor(uint8_t pin,int value);//constructor for outputs for pins 0 - 19
-	Sensor(uint8_t pin,signalType type,int value);//constructor for outputs
+    Sensor(uint8_t pin,signalType type,int value);//constructor for outputs
     Sensor(uint8_t pin,char p);//constructor for INPUT_PULLUP
     ~Sensor();//deconstructor
 
-   void state(int value);
-   int state();
-   void report();   
+    void state(int value);
+    int state();
+    void report();   
 };
 
 class ImSensor{
 
-protected:
-	
+  protected:	
     signalType type;
-	int value;	
+    int value;	
 
-public:
+  public:
+		ImSensor(int value=0,signalType type = digital); // constructor for imaginary sensor
+		~ImSensor();
 
-	ImSensor(int value=0,signalType type = digital); // constructor for imaginary sensor
-	~ImSensor();
-
-	int state();
-	void state(int x);
-
+		int state();
+		void state(int x);
 };
 
 class Sonar{
-public:
+	public:
+    int triggerPin;
+		int echoPin;
 
-	int triggerPin;
-	int echoPin;
+		Sonar(int triggerPin, int echoPin);
 
-	Sonar(int triggerPin, int echoPin);
-
-	double state();
-
+		double state();
 };
 
 class Timer{
