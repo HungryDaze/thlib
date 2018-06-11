@@ -43,7 +43,7 @@ Sensor::Sensor(uint8_t pin,int value){      // constructor for outputs sensors
     }
 }
 
-Sensor::Sensor(uint8_t pin,signalType type,int value){
+Sensor::Sensor(uint8_t pin,signalType type,int value){      //implement for constructor for outputs
 
 	this->pin = pin;
 	this->type = type;
@@ -58,9 +58,17 @@ Sensor::Sensor(uint8_t pin,signalType type,int value){
     }
 }
 
+Sensor::Sensor(uint8_t pin,char p){        //implement for constructor for INPUT_PULLUP
+
+	this->pin = pin;
+	this->type = digital;
+	pinMode(pin,INPUT_PULLUP);
+}
+
+
 Sensor::~Sensor(){}  
 
-int Sensor::state(){        						 // implement for state() method 
+int Sensor::state(){        						    // implement for state() method 
 
      if(type==analog){
 		uint16_t temp = analogRead(pin);
