@@ -1,2 +1,2 @@
 # thlilb
-a personal library for quick working 
+a personal arduino library to accelarate working with simple Sensors 
