@@ -27,7 +27,6 @@ public:
 
    void state(int value);
    int state();
-
    void report();   
 };
 
