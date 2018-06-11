@@ -11,7 +11,6 @@ enum signalType{analog,digital};
 class Sensor{
 
   protected:
-
     uint8_t pin;
     signalType type;
     int value;
