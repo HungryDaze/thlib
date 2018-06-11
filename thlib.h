@@ -3,13 +3,11 @@
 
 #include "Arduino.h"
 
-
 using namespace std;
 
 /* One pin sensor call : Sensor name(pin number,enum signalType, startingValue for Outputs)*/
 
 enum signalType{analog,digital};
-
 
 class Sensor{
 
@@ -18,7 +16,6 @@ protected:
     uint8_t pin;
     signalType type;
     int value;
-
 
 public:
     Sensor(uint8_t pin); //constructor for inputs for pins 0 - 19
@@ -48,19 +45,18 @@ public:
 
 	int state();
 	void state(int x);
-	
 
 };
 
 class Sonar{
 public:
 
-int triggerPin;
-int echoPin;
+	int triggerPin;
+	int echoPin;
 
-Sonar(int triggerPin, int echoPin);
+	Sonar(int triggerPin, int echoPin);
 
-double state();
+	double state();
 
 };
 
