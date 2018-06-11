@@ -22,16 +22,16 @@ protected:
 
 public:
     Sensor(uint8_t pin); //constructor for inputs for pins 0 - 19
-	Sensor(uint8_t pin,signalType type);//constructor for inputs over pin 19
+    Sensor(uint8_t pin,signalType type);//constructor for inputs over pin 19
     Sensor(uint8_t pin,int value);//constructor for outputs for pins 0 - 19
-	Sensor(uint8_t pin,signalType type,int value);//constructor for outputs
+    Sensor(uint8_t pin,signalType type,int value);//constructor for outputs
     ~Sensor();
 
 
    void state(int value);
    int state();
 
-     void report();
+    void report();
    
 
 };
@@ -41,7 +41,7 @@ class ImSensor{
 protected:
 	
     signalType type;
-	int value;
+    int value;
 
 	
 
