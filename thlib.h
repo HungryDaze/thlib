@@ -1,3 +1,12 @@
+/*
+name=thlib.h
+version=1.0.0
+author=Thomas Provatidis <tom_prova@yahoo.gr>
+maintainer=Thomas Provatidis <tom_prova@yahoo.gr>
+sentence=A library that makes coding a arduino sensor easy.
+category=Arduino
+*/
+
 #ifndef THLIB_H_INCLUDED
 #define THLIB_H_INCLUDED
 #include "Arduino.h"
